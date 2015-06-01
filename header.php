@@ -7,7 +7,7 @@
 		<?php wp_head(); ?>
 	</head>
 	<body>
-		<header class="site-header--ydw">
+		<header class="site-header--ydw" style="background-image: url('<?= esc_url(get_header_image()) ?>')">
 			<h1 class="site-title--ydw animated fadeInDown">Youth Dance Weekend</h1>
 		</header>
 		<div class="container">
