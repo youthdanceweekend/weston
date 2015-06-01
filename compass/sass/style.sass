@@ -4,6 +4,7 @@
 @import animate
 
 @import modules/footer
+@import modules/sliding-nav
 
 .margin-trailer-0
 	margin-bottom: 0
@@ -44,7 +45,8 @@
 		text-align: left
 
 .navbar-overlap
-	margin-top: -27px
+	@media (min-width: $screen-md-min)
+		margin-top: -27px
 
 .navbar-ydw
 	background: linear-gradient(180deg, #FFF, #EEE)
@@ -58,3 +60,20 @@
 		text-transform: uppercase
 		> li > a
 			color: #999
+	@media (max-width: $screen-sm-max)
+		border-radius: 0
+		box-shadow: none
+		.navbar-nav, .navbar-form
+			margin: 7.5px -15px
+			border: 0
+			padding: 0 15px
+			float: none !important
+		.navbar-nav
+			font-family: $body-fonts
+			font-weight: 400
+			padding: 0
+			> li
+				float: none
+				> a
+					display: block
+					padding: 10px 15px

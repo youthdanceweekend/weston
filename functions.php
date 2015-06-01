@@ -38,6 +38,8 @@ function weston_scripts() {
 
 	// Adobe Edge Fonts: Montserrat, Voltaire, Lato
 	wp_enqueue_script('weston-fonts', '//use.edgefonts.net/montserrat;voltaire;lato:n3,i3,n4,i4.js', array(), '20150315', false);
+	wp_enqueue_script('weston-jquery', 'http://code.jquery.com/jquery-1.11.3.min.js', array(), '1.11.3', false);
+	wp_enqueue_script('weston-sliding-nav', get_template_directory_uri() . '/js/weston.slidingNav.js', array(), '20150601', false);
 }
 add_action( 'wp_enqueue_scripts', 'weston_scripts' );
 

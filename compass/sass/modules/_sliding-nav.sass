@@ -1,0 +1,60 @@
+$side-nav-width: 240px !default
+$side-nav-transition-duration: 250ms !default
+$side-nav-transition-timing-function: ease-out !default
+
+.nav-toggle
+	display: none
+
+@media (max-width: $screen-sm-max)
+	.nav-toggle
+		display: block
+		color: #FFF
+		position: absolute
+		top: 0
+		left: 0
+		padding: 10px 15px
+		text-transform: uppercase
+		letter-spacing: 1px
+		font-weight: 400
+		text-shadow: 1px 1px 0 rgba(#000, .15)
+		background: rgba(#000, .25)
+		transition: .15s linear all
+		&:hover, &:active, &:focus
+			outline: none
+			color: #FFF
+			text-decoration: none
+			background: rgba(#000, .35)
+
+	.nav-menu
+		position: fixed
+		bottom: 0
+		left: -$side-nav-width
+		top: 0
+		width: $side-nav-width
+		overflow: auto
+		z-index: 1
+		transition: all $side-nav-transition-duration $side-nav-transition-timing-function
+		-webkit-overflow-scrolling: touch
+
+	.full-page
+		transition: all $side-nav-transition-duration $side-nav-transition-timing-function
+
+	.nav-in
+		position: fixed
+
+	.nav-in
+		> .full-page::after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: rgba(black, .6)
+			z-index: 1000
+
+	.nav-in > .nav-menu
+		transform: translateX($side-nav-width)
+
+	.nav-in > .full-page
+		transform: translateX($side-nav-width)
