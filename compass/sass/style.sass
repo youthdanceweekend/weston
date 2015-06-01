@@ -1,0 +1,60 @@
+@import variables
+@import base
+
+@import animate
+
+@import modules/footer
+
+.margin-trailer-0
+	margin-bottom: 0
+
+.site-header--ydw
+	padding: 15vw 0
+	border-bottom: 4px solid rgba(#FFF, .15)
+	background:
+		color: #000
+		image: image-url('/static/photos/techno.jpg')
+		size: cover
+		attachment: fixed
+		position: center center
+
+.site-title--ydw
+	font-family: $site-heading-fonts
+	text-align: center
+	text-transform: uppercase
+	letter-spacing: .05em
+	margin: 0
+	padding: 0
+	color: rgba(#FFF, .9)
+	text-shadow: 1px 1px 0 rgba(#000, .15)
+	font-size: 15vw
+	@media (min-width: 600px)
+		font-size: 6vw
+
+.site-description--ydw
+	font-family: $heading-fonts
+	color: #FFF
+	margin: 0 auto
+	text-shadow: 1px 1px 0 rgba(#000, .15)
+	width: 85vw
+	font-size: 4vw
+	text-align: center
+	@media (min-width: 600px)
+		font-size: 2vw
+		text-align: left
+
+.navbar-overlap
+	margin-top: -27px
+
+.navbar-ydw
+	background: linear-gradient(180deg, #FFF, #EEE)
+	border: 0
+	border-radius: 3px
+	box-shadow: 0 0 5px 0 rgba(#000, .1), 0 0 0 1px rgba(#000, .07)
+	font-size: 14px
+	.navbar-nav
+		font-size: 18px
+		font-family: $heading-fonts
+		text-transform: uppercase
+		> li > a
+			color: #999

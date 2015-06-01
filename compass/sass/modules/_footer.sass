@@ -1,0 +1,31 @@
+.site-footer
+	background: #000
+	padding: 0 0 40px 0
+	position: relative
+	margin-top: 360px
+	&::before
+		content: " "
+		display: block
+		background-image: image-url("grass.png")
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+			background-image: image-url("grass@2x.png")
+			background-size: 1350px 99px
+		background-repeat: repeat-x
+		height: 100px
+		position: absolute
+		top: -98px
+		right: 0
+		left: 0
+	&::after
+		content: " "
+		display: block
+		background-image: image-url("tree.png")
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+			background-image: image-url("tree@2x.png")
+			background-size: 300px 337.5px
+		background-repeat: no-repeat
+		height: 337.5px
+		width: 300px
+		position: absolute
+		right: 20px
+		top: -360px
