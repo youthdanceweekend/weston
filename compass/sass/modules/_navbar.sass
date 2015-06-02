@@ -1,0 +1,74 @@
+.navbar-overlap
+	@media (min-width: $screen-md-min)
+		margin-top: -27px
+
+.navbar-ydw
+	$shadow: 0 0 5px 0 rgba(#000, .1), 0 0 0 1px rgba(#000, .07)
+	$gradient: linear-gradient(180deg, #FFF, #EEE)
+	$gray: #999
+	background: $gradient
+	border: 0
+	border-radius: 3px
+	box-shadow: $shadow
+	font-size: 14px
+	z-index: 1
+	.navbar-nav
+		font-size: 18px
+		font-family: $heading-fonts
+		text-transform: uppercase
+		margin-left: -15px
+		> li > a
+			color: $gray
+			&:first-child
+				border-radius: 4px 0 0 4px
+		.dropdown-menu
+			text-transform: none
+			> li > a
+				color: $gray
+			@media (max-width: $screen-sm-max)
+				// undo some bootstrap stuff
+				width: auto
+				box-shadow: none
+				border: 0
+				margin: 0
+				float: none
+				position: static
+				> li > a
+					color: $gray !important
+					padding: 5px 15px 5px 25px !important
+				> li > a:hover
+					background: none
+					color: darken($gray, 25%) !important
+			@media (min-width: $screen-md-min)
+				font-family: $body-fonts
+				border-radius: 4px
+				margin-top: 4px
+				box-shadow: $shadow
+				border: 0
+				background: $gradient
+				padding: 0
+				> li > a
+					padding: 10px
+				> li > a:hover
+					background-color: rgba(#000, .05)
+					color: darken($gray, 25%)
+				> .active > a
+					background-color: $mid-blue
+					color: #FFF
+	@media (max-width: $screen-sm-max)
+		border-radius: 0
+		box-shadow: none
+		.navbar-nav, .navbar-form
+			margin: 7.5px -15px
+			border: 0
+			padding: 0 15px
+			float: none !important
+		.navbar-nav
+			font-family: $body-fonts
+			font-weight: 400
+			padding: 0
+			> li
+				float: none
+				> a
+					display: block
+					padding: 10px 15px
