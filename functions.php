@@ -50,6 +50,7 @@ function weston_scripts() {
 	wp_enqueue_script('weston-jquery', 'http://code.jquery.com/jquery-1.11.3.min.js', array(), '1.11.3', false);
 	wp_enqueue_script('weston-bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array(), '3.3.4', false);
 	wp_enqueue_script('weston-sliding-nav', get_template_directory_uri() . '/js/weston.slidingNav.js', array(), '20150601', false);
+	wp_enqueue_script('weston-modernizr', get_template_directory_uri() . '/lib/modernizr.js', array(), '20150602', false);
 }
 add_action( 'wp_enqueue_scripts', 'weston_scripts' );
 

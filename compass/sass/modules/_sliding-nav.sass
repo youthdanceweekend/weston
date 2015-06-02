@@ -6,17 +6,26 @@ $side-nav-transition-timing-function: ease-out !default
 	display: none
 
 @media (max-width: $screen-sm-max)
-	.nav-backdrop
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-		background: rgba(#000, .6)
-		display: block
-		opacity: 0
-		pointer-events: none
-		transition: all $side-nav-transition-duration $side-nav-transition-timing-function
+	// This backdrop can only work if CSS pointer events work
+	.pointerevents
+		.nav-backdrop
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: rgba(#000, .6)
+			display: block
+			opacity: 0
+			pointer-events: none
+			transition: all $side-nav-transition-duration $side-nav-transition-timing-function
+
+		.nav-in
+			> .nav-backdrop
+				display: block
+				opacity: 1
+				pointer-events: all
+				transform: translateX($side-nav-width)
 
 	.nav-toggle
 		display: block
@@ -53,13 +62,6 @@ $side-nav-transition-timing-function: ease-out !default
 
 	.nav-in
 		position: fixed
-
-	.nav-in
-		> .nav-backdrop
-			display: block
-			opacity: 1
-			pointer-events: all
-			transform: translateX($side-nav-width)
 
 	.nav-in > .nav-menu
 		transform: translateX($side-nav-width)
