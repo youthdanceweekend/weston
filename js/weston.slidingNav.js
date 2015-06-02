@@ -17,7 +17,13 @@
 			}
 		};
 
+		// Add the toggle action to the menu button:
 		$('[data-toggle="menu"]').on('click.slidingnav touchend.slidingnav', nav_toggle_handler);
+
+		// Add the nav out action to the entire page:
 		$('.full-page').on('click.slidingnav touchend.slidingnav', nav_out_handler);
+
+		// Prevent the nav out action from functioning when someone pushes on the nav menu:
+		$('.nav-menu').on('click.slidingnav touchend.slidingnav', function (e) { e.stopPropagation(); });
 	});
 }(jQuery));
