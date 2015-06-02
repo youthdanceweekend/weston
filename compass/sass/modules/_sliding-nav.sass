@@ -6,6 +6,18 @@ $side-nav-transition-timing-function: ease-out !default
 	display: none
 
 @media (max-width: $screen-sm-max)
+	.nav-backdrop
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: rgba(#000, .6)
+		display: block
+		opacity: 0
+		pointer-events: none
+		transition: all $side-nav-transition-duration $side-nav-transition-timing-function
+
 	.nav-toggle
 		display: block
 		color: #FFF
@@ -18,7 +30,7 @@ $side-nav-transition-timing-function: ease-out !default
 		font-weight: 400
 		text-shadow: 1px 1px 0 rgba(#000, .15)
 		background: rgba(#000, .25)
-		transition: .15s linear all
+		transition: all $side-nav-transition-duration $side-nav-transition-timing-function
 		&:hover, &:active, &:focus
 			outline: none
 			color: #FFF
@@ -43,15 +55,11 @@ $side-nav-transition-timing-function: ease-out !default
 		position: fixed
 
 	.nav-in
-		> .full-page::after
-			content: ""
-			position: absolute
-			top: 0
-			left: 0
-			right: 0
-			bottom: 0
-			background: rgba(black, .6)
-			z-index: 1000
+		> .nav-backdrop
+			display: block
+			opacity: 1
+			pointer-events: all
+			transform: translateX($side-nav-width)
 
 	.nav-in > .nav-menu
 		transform: translateX($side-nav-width)

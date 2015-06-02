@@ -49,17 +49,39 @@
 		margin-top: -27px
 
 .navbar-ydw
-	background: linear-gradient(180deg, #FFF, #EEE)
+	$shadow: 0 0 5px 0 rgba(#000, .1), 0 0 0 1px rgba(#000, .07)
+	$gradient: linear-gradient(180deg, #FFF, #EEE)
+	$gray: #999
+	background: $gradient
 	border: 0
 	border-radius: 3px
-	box-shadow: 0 0 5px 0 rgba(#000, .1), 0 0 0 1px rgba(#000, .07)
+	box-shadow: $shadow
 	font-size: 14px
 	.navbar-nav
 		font-size: 18px
 		font-family: $heading-fonts
 		text-transform: uppercase
+		margin-left: -15px
 		> li > a
-			color: #999
+			color: $gray
+		.dropdown-menu
+			font-family: $body-fonts
+			text-transform: none
+			border-radius: 4px
+			margin-top: 4px
+			box-shadow: $shadow
+			border: 0
+			background: $gradient
+			padding: 0
+			> li > a
+				padding: 10px
+				color: $gray
+			> li > a:hover
+				background-color: rgba(#000, .05)
+				color: darken($gray, .25)
+			> .active > a
+				background-color: $mid-blue
+				color: #FFF
 	@media (max-width: $screen-sm-max)
 		border-radius: 0
 		box-shadow: none
