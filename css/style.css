@@ -2252,6 +2252,10 @@ Copyright (c) 2015 Daniel Eden
       color: #CCC;
       text-decoration: none; }
 
+@media (max-width: 479px) {
+  .col-xxs-12 {
+    width: 100%;
+    float: none; } }
 .margin-leader {
   margin-top: 25.2px; }
 
