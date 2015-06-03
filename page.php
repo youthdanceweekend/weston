@@ -19,13 +19,15 @@
 				<?php endwhile; ?>
 			</div>
 			<div class="col-sm-5">
-				<?php include("inc/tinyletter.php"); ?>
 				<?php $sidebar = get_post_meta(get_the_ID(), 'sidebar', true); ?>
 				<?php if ($sidebar): ?>
 					<?= $sidebar ?>
 				<?php else: ?>
 					<?php get_sidebar(); ?>
 				<?php endif; ?>
+				<div class="ydw-panel ydw-panel--gradient margin-leader">
+					<?php include("inc/tinyletter.php"); ?>
+				</div>
 			</div>
 		</div><!-- /.row -->
 	</div><!-- #content -->

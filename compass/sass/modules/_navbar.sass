@@ -3,13 +3,12 @@
 		margin-top: -27px
 
 .navbar-ydw
-	$shadow: $panel-box-shadow
-	$gradient: linear-gradient(180deg, #FFF, #EEE)
+	@extend .ydw-panel
+	@extend .ydw-panel--gradient
+	@extend .ydw-panel--no-padding
 	$gray: #999
-	background: $gradient
 	border: 0
 	border-radius: 3px
-	box-shadow: $shadow
 	font-size: 14px
 	z-index: 1
 	.navbar-nav
@@ -43,9 +42,9 @@
 				font-family: $body-fonts
 				border-radius: 4px
 				margin-top: 4px
-				box-shadow: $shadow
+				box-shadow: $panel-box-shadow
 				border: 0
-				background: $gradient
+				background: $panel-gradient
 				padding: 0
 				> li > a
 					padding: 10px
