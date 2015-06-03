@@ -29,3 +29,24 @@
 		position: absolute
 		right: 20px
 		top: -360px
+
+	.ydw-nav-list
+
+		&, & ul, & li
+			margin: 0
+			padding: 0
+			list-style-type: none
+
+		// The rest inherit the footer color
+		li > a
+			color: inherit
+			&:hover
+				color: lighten($dark-blue, 10%)
+				text-decoration: none
+
+		// Top level items are gray
+		& > li > a
+			color: #777
+			&:hover
+				color: #CCC
+				text-decoration: none

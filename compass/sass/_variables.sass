@@ -2,10 +2,17 @@ $heading-fonts: voltaire, sans-serif
 $site-heading-fonts: montserrat, sans-serif
 $body-fonts: lato, sans-serif
 
+$base-font-size: 18px
+$base-line-height: 1.4
+$base-line-height-computed: $base-font-size * $base-line-height
+
+$gutter-width: 30px // Read-only. Do not change without overloading Bootstrap.
+
 $light-blue: #c3d0d3
 $mid-blue: darken(#c3d0d3, 15%)
 $dark-blue: darken(#c3d0d3, 50%)
 
+// The following breakpoint sizes are read-only. Do not change without overloading Bootstrap.
 $screen-xs-min: 480px
 $screen-sm-min: 768px
 $screen-md-min: 992px
@@ -13,3 +20,6 @@ $screen-lg-min: 1200px
 $screen-xs-max: ($screen-sm-min - 1)
 $screen-sm-max: ($screen-md-min - 1)
 $screen-md-max: ($screen-lg-min - 1)
+
+$border-radius-base: 4px
+$panel-box-shadow: 0 0 5px 0 rgba(#000, .1), 0 0 0 1px rgba(#000, .07)
