@@ -18,8 +18,11 @@
 		margin-left: -15px
 		> li > a
 			color: $gray
-			&:first-child
-				border-radius: 4px 0 0 4px
+		> li:first-child > a
+			border-radius: 4px 0 0 4px
+		// Undo Bootstrap style
+		> .active > a
+			background: transparent
 		.dropdown-menu
 			text-transform: none
 			> li > a

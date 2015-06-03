@@ -2256,6 +2256,10 @@ Copyright (c) 2015 Daniel Eden
   .col-xxs-12 {
     width: 100%;
     float: none; } }
+.nudge-up {
+  position: relative;
+  top: -2px; }
+
 .margin-leader {
   margin-top: 25.2px; }
 
@@ -2278,8 +2282,10 @@ Copyright (c) 2015 Daniel Eden
     margin-left: -15px; }
     .navbar-ydw .navbar-nav > li > a {
       color: #999; }
-      .navbar-ydw .navbar-nav > li > a:first-child {
-        border-radius: 4px 0 0 4px; }
+    .navbar-ydw .navbar-nav > li:first-child > a {
+      border-radius: 4px 0 0 4px; }
+    .navbar-ydw .navbar-nav > .active > a {
+      background: transparent; }
     .navbar-ydw .navbar-nav .dropdown-menu {
       text-transform: none; }
       .navbar-ydw .navbar-nav .dropdown-menu > li > a {

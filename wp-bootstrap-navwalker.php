@@ -89,6 +89,9 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 			} else {
 				$atts['href'] = ! empty( $item->url ) ? $item->url : '';
 			}
+			if ( ! empty( $item->attr_title ) ) {
+				$atts['title']			= $item->attr_title;
+			}
 
 			$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args );
 
@@ -102,20 +105,11 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 
 			$item_output = $args->before;
 
-			/*
-			 * Glyphicons
-			 * ===========
-			 * Since the the menu item is NOT a Divider or Header we check the see
-			 * if there is a value in the attr_title property. If the attr_title
-			 * property is NOT null we apply it as the class name for the glyphicon.
-			 */
-			if ( ! empty( $item->attr_title ) )
-				$item_output .= '<a'. $attributes .'><span class="glyphicon ' . esc_attr( $item->attr_title ) . '"></span>&nbsp;';
-			else
-				$item_output .= '<a'. $attributes .'>';
+
+			$item_output .= '<a'. $attributes .'>';
 
 			$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
-			$item_output .= ( $args->has_children && 0 === $depth ) ? ' <span class="caret"></span></a>' : '</a>';
+			$item_output .= ( $args->has_children && 0 === $depth ) ? ' <i class="fa fa-fw fa-caret-down nudge-up"></i></a>' : '</a>';
 			$item_output .= $args->after;
 
 			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
