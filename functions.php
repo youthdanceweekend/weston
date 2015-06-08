@@ -1,5 +1,6 @@
 <?php
 require_once('wp-bootstrap-navwalker.php');
+require_once('shortcodes/ydw-list-posts.php');
 
 function weston_setup() {
 	add_theme_support('automatic-feed-links');
@@ -35,6 +36,9 @@ function weston_setup() {
 	register_nav_menu( 'footer2', "Footer Column 2" );
 	register_nav_menu( 'footer3', "Footer Column 3" );
 	register_nav_menu( 'footer4', "Footer Column 4" );
+
+	// Shortcodes:
+	add_shortcode('ydw-list-posts', 'ydw_list_posts');
 
 }
 add_action( 'after_setup_theme', 'weston_setup' );
