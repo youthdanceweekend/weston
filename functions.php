@@ -1,6 +1,7 @@
 <?php
 require_once('wp-bootstrap-navwalker.php');
 require_once('shortcodes/ydw-list-posts.php');
+require_once('shortcodes/clearfix.php');
 
 function weston_setup() {
 	add_theme_support('automatic-feed-links');
@@ -39,6 +40,7 @@ function weston_setup() {
 
 	// Shortcodes:
 	add_shortcode('ydw-list-posts', 'ydw_list_posts');
+	add_shortcode('clearfix', 'clearfix');
 
 }
 add_action( 'after_setup_theme', 'weston_setup' );
