@@ -2208,7 +2208,8 @@ Copyright (c) 2015 Daniel Eden
   background: #000;
   padding: 0 0 40px 0;
   position: relative;
-  margin-top: 360px; }
+  margin-top: 360px;
+  font-weight: 400; }
   .site-footer::before {
     content: " ";
     display: block;
