@@ -3,7 +3,10 @@
 	padding: 0 0 40px 0
 	position: relative
 	margin-top: 360px
-	font-weight: 400
+	font-weight: 300
+	color: darken($mid-blue, 15%)
+
+	// Trees and Grass:
 	&::before
 		content: " "
 		display: block
@@ -42,12 +45,12 @@
 		li > a
 			color: inherit
 			&:hover
-				color: lighten($dark-blue, 10%)
+				color: $mid-blue
 				text-decoration: none
 
 		// Top level items are gray
 		& > li > a
-			color: #777
+			color: #AAA
 			&:hover
 				color: #CCC
 				text-decoration: none
