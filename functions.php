@@ -14,19 +14,34 @@ function weston_setup() {
 	add_theme_support('custom-header', array(
 		'width'         => 980,
 		'height'        => 60,
-		'default-image' => '%s/images/headers/frisbar.jpg',
+		'default-image' => '%s/images/headers/dance.jpg',
 		'random-default'=> true,
 		'uploads'       => true,
 	));
 	register_default_headers(array(
-		'frisbee' => array(
-			'url'           => '%s/images/headers/frisbar.jpg',
-			'thumbnail_url' => '%s/images/headers/frisbar.jpg',
+		'acro' => array(
+			'url'           => '%s/images/headers/acro.jpg',
+			'thumbnail_url' => '%s/images/headers/acro.jpg',
 			'description'   => "Frisbee"
 		),
 		'techno' => array(
 			'url'           => '%s/images/headers/techno.jpg',
 			'thumbnail_url' => '%s/images/headers/techno.jpg',
+			'description'   => "Techno"
+		),
+		'dance' => array(
+			'url'           => '%s/images/headers/dance.jpg',
+			'thumbnail_url' => '%s/images/headers/dance.jpg',
+			'description'   => "Techno"
+		),
+		'dance2' => array(
+			'url'           => '%s/images/headers/dance2.jpg',
+			'thumbnail_url' => '%s/images/headers/dance2.jpg',
+			'description'   => "Techno"
+		),
+		'mary' => array(
+			'url'           => '%s/images/headers/mary.jpg',
+			'thumbnail_url' => '%s/images/headers/mary.jpg',
 			'description'   => "Techno"
 		),
 	));
