@@ -5,6 +5,27 @@
 		<meta name="viewport" content="width=device-width">
 		<title><?php wp_title('| ', true, 'right'); ?><?php bloginfo('name'); ?></title>
 		<?php wp_head(); ?>
+
+		<?php if(is_random_header_image()): ?>
+			<script type="text/javascript">
+				// Cache-safe random header image:
+				// Only selects from "uploaded" headers, not default ones.
+				(function () {
+					var header_images = [
+						<?php $images = get_uploaded_header_images(); ?>
+						<?php foreach($images as $image): ?>
+							'<?= $image['url'] ?>'<?php if ($image !== end($images)): ?>,<?php endif; ?>
+						<?php endforeach; ?>
+					];
+					// On domready, assign a random image to the header:
+					$(function () {
+						var random_image = header_images[Math.floor(Math.random() * header_images.length)];
+						$('.site-header--ydw').css('background-image', 'url("'+ random_image +'")');
+						console.log(random_image);
+					});
+				}());
+			</script>
+		<?php endif; ?>
 	</head>
 	<body>
 		<div class="full-page">
