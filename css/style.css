@@ -1,6 +1,6 @@
 body {
-  background: #c3d0d3 -webkit-radial-gradient(50% 30vw, circle, #e6eced, #c3d0d3 60vw);
-  background: #c3d0d3 radial-gradient(circle at 50% 30vw, #e6eced, #c3d0d3 60vw);
+  background: #c3d0d3 -webkit-radial-gradient(50% 30vw, circle, #c9d5d7, #abbec2 60vw);
+  background: #c3d0d3 radial-gradient(circle at 50% 30vw, #c9d5d7, #abbec2 60vw);
   font-size: 18px;
   color: #405357;
   font-family: lato, sans-serif;
