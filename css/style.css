@@ -2,13 +2,13 @@ body {
   background: #c3d0d3 -webkit-radial-gradient(50% 30vw, circle, #c9d5d7, #abbec2 60vw);
   background: #c3d0d3 radial-gradient(circle at 50% 30vw, #c9d5d7, #abbec2 60vw);
   font-size: 18px;
-  color: #405357;
+  color: #2a373a;
   font-family: lato, sans-serif;
   font-weight: 300;
   line-height: 1.4; }
 
 a {
-  color: #306b7d;
+  color: #205b6d;
   text-decoration: underline;
   -webkit-text-decoration-color: #97adb3;
      -moz-text-decoration-color: #97adb3;
@@ -31,7 +31,7 @@ h1 {
 h2 {
   font-size: 36px;
   font-family: montserrat, sans-serif;
-  color: #556f75;
+  color: #405357;
   text-transform: uppercase;
   font-weight: normal; }
 
@@ -2232,7 +2232,7 @@ Copyright (c) 2015 Daniel Eden
 
 .btn-default {
   border: 0;
-  color: #405357;
+  color: #2a373a;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.07);
   background-color: #FFF;
   background-image: -webkit-linear-gradient(270deg, transparent, rgba(0, 0, 0, 0.1));
