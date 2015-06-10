@@ -43,6 +43,9 @@ h4 {
   font-size: inherit;
   font-weight: 400; }
 
+h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
+  color: inherit; }
+
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license - http://opensource.org/licenses/MIT
@@ -2243,8 +2246,6 @@ Copyright (c) 2015 Daniel Eden
     background-image: -webkit-linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1));
     background-image: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.1));
     background-color: #EEE; }
-  .btn-default::-moz-focus-inner {
-    border: 0; }
 
 .site-footer {
   background: #000;
